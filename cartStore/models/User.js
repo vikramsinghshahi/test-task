@@ -9,12 +9,6 @@ var userSchema = new Schema(
         name: { type: String, required: true },
         email: { type: String, required: true, unique: true },
         password: { type: String, required: true, minlength: 5 },
-        cart: [
-            {
-                quantity: { type: Number, default: 0 },
-                book: { type: mongoose.Schema.Types.ObjectId, ref: 'Version1Book' },
-            },
-        ],
     },
     { timestamps: true }
 );

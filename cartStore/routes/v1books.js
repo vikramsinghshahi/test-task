@@ -6,7 +6,7 @@ var auth = require('../middlewares/auth');
 var router = express.Router();
 
 // Protecting the routes
-// router.use(auth.verifyToken);
+router.use(auth.verifyToken);
 
 /* GET list of all books. */
 router.get('/', async function (req, res, next)

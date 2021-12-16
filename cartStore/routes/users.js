@@ -15,7 +15,6 @@ router.get('/', auth.verifyToken, async function (req, res, next)
         name: user.name,
         email: user.email,
         userId: user.id,
-        iat: req.user.iat,
       },
     });
   } catch (error)
@@ -70,6 +69,7 @@ router.post('/login', async (req, res, next) =>
     }
     // generate token
     var token = await user.signToken();
+    console.log(token)
     res.json({ user: user.userJSON(token) });
   } catch (error)
   {
