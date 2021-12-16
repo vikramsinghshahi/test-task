@@ -18,7 +18,7 @@ mongoose.connect(
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var v1booksRouter = require('./routes/v1books');
+var v1booksRouter = require('./routes/items');
 // var v2booksRouter = require('./routes/v2books');
 
 var app = express();
@@ -35,7 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api', indexRouter);
 app.use('/api/users', usersRouter);
-app.use('/api/v1/books', v1booksRouter);
+app.use('/api/items', v1booksRouter);
 // app.use('/api/v2/books', v2booksRouter);
 
 // catch 404 and forward to error handler

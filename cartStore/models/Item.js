@@ -4,13 +4,11 @@ let Schema = mongoose.Schema;
 
 let bookSchema = new Schema(
     {
-        title: String,
+        title: { type: String, required: true },
         price: { type: Number, required: true },
         description: { type: String },
         quantity: { type: Number, default: 0 },
-        image: [String],
-        price: [Number],
-        quantity: [Number],
+        image: { String },
     },
     { timestamps: true }
 );
