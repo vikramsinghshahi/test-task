@@ -2,7 +2,7 @@ let mongoose = require('mongoose');
 
 let Schema = mongoose.Schema;
 
-let bookSchema = new Schema(
+let itemSchema = new Schema(
     {
         title: { type: String, required: true },
         price: { type: Number, required: true },
@@ -13,6 +13,6 @@ let bookSchema = new Schema(
     { timestamps: true }
 );
 
-let Book = mongoose.model('Book', bookSchema);
+let Item = mongoose.model('Item', itemSchema);
 
-module.exports = Book;
+module.exports = Item;
